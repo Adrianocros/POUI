@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { TarefaRoutes } from './tarefas';
 import { CadastrarTarefaComponent } from './tarefas';
+import { EditarTarefaComponent } from './tarefas';
 
 //Todas os gerenciamentos de rotas
 export const routes: Routes = [
@@ -14,6 +15,11 @@ export const routes: Routes = [
   {
     path:'tarefas/cadastrar',
     component:CadastrarTarefaComponent,
+    pathMatch:'full'
+    },
+      {
+    path:'tarefas/editar/:id',
+    component:EditarTarefaComponent,
     pathMatch:'full'
     },
   ...TarefaRoutes
